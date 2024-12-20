@@ -1,0 +1,61 @@
+:root {
+    --shadow: 0 .8rem 1rem rgba(0, 0, 0, .08), 0 -.8rem 1rem rgba(0, 0, 0, .08);
+    --border-radius-1: .4rem;
+   --transparency-1: rgba(0, 0, 0, .05);
+   --transition: all .5s;
+
+    --border: 1px solid rgba(0, 0, 0, 0.22);
+
+    --bp-large: 56.25em;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width: 28.13em) {
+    html {
+        font-size: 37.5%;
+    }
+}
+
+
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: brown;
+    color: white;
+}
+
+body {
+    box-sizing: border-box;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 3.4rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: min-content 1fr max-content;
+}

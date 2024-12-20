@@ -1,0 +1,50 @@
+.footer {
+    background-color: rgba(156, 48, 48, 0.018);
+    padding: 2rem 0;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.footer-logo {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+}
+
+.footer div {
+    gap: 1rem;
+}
+
+.footer p {
+    text-transform: uppercase;
+}
+
+.footer ul li {
+    list-style: none;
+    text-transform: uppercase;
+    padding: .6rem 1.2rem;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.footer ul li:hover {
+    transform: rotate(25deg) scale(1.1);
+    color: brown;
+    box-shadow: var(--box-shadow);
+    background-color: rgba(156, 48, 48, 0.121);
+}
+
+
+@media only screen and (max-width: 56.25em) {
+    .footer {
+        flex-direction: column;
+    }
+
+    .footer ul {
+        flex-direction: column;
+    }
+
+    .footer ul li {
+        border-bottom: 1px solid rgba(156, 48, 48, 0.018);
+        font-size: 1rem;
+    }
+}

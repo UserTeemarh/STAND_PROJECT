@@ -1,0 +1,243 @@
+.hero-section {
+    background-image: linear-gradient( rgb(9, 85, 9), rgb(35, 133, 35),  rgb(24, 141, 24));
+    width: 100%;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+.header {
+    column-gap: 4rem;
+}
+
+.header-logo {
+    flex: 0 0 10%;
+    line-height: .3;
+    font-size: 3.6rem;
+    color: white;
+}
+
+.header-logo span {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.header-nav {
+    flex: 1;
+    align-items: stretch;
+}
+
+.nav-list {
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+
+    list-style: none;
+    border-radius: var(--border-radius-1);
+    overflow: hidden;
+}
+
+.nav-list li {
+    flex: 1;
+    display: flex;
+}
+
+
+.nav-link:link,
+.nav-link:visited {
+    flex: 1;
+    box-sizing: border-box;
+    border-left: 2px solid rgba(0, 0, 0, 0.2);
+    padding: 1.4rem 2.4rem;
+    background-color: white;
+    color: brown;
+    font-size: 1.6rem;
+
+    transition: var(--transition);
+}
+
+.nav-link:hover
+ {
+    background-color: brown;
+    color: white;
+}
+
+.nav-link:focus {
+    background-color: rgba(165, 42, 42, 0.438);
+}
+
+.home:link,
+.home:visited {
+    background-color: brown;
+    color: white;
+}
+
+
+/* HERO SECTION */
+
+.hero-container {
+    padding: 6.4rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.4rem;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(1, 61, 1, 0.397), rgba(7, 88, 7, 0.384)), url(../img/istockphoto-1500843872-612x612.jpg);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.05);
+    border: 1rem solid rgb(35, 133, 35);
+    border-radius: var(--border-radius-1);
+    animation: shift .5s linear 1 .5s;
+}
+
+@keyframes shift {
+    0% {
+        transform: translateX(-10rem);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.04);
+        opacity: 1;
+    }
+
+  
+    100% {
+        transform: translate(0);
+    }
+}
+
+.hero-content {
+    animation: animate .6s linear 1;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(10rem);
+    }
+
+    50% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        transform: translate(0);
+    }  
+}
+
+.hero-description {
+    font-size: 1.8rem;
+    margin-bottom: 3.2rem;
+    line-height: 1.4;
+    color: white;
+}
+
+.hero-cta {
+    width: 65%;
+    background-color: brown;
+}
+
+.hero-cta:hover {
+    background-color: rgb(65, 6, 6);
+}
+
+.hero-cta a:link,
+.hero-cta a:visited {
+    font-size: 2rem;
+    color: white;
+    z-index: 2;
+}
+
+.cta {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: .2rem 1.2rem;
+    color: beige;
+}
+
+
+@media only screen and (max-width: 56.25em) {
+    .header-logo {
+        flex: 1;
+        text-align: center;
+    }
+    .header-nav {
+        display: none;
+    }
+
+    .hero-container {
+        padding: 4.4rem 0;
+    }
+
+    .hero-image {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .hero-content {
+        padding: 1.6rem;
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+}
+
+/* HERO-FEATURE SECTION */
+
+.hero-feature {
+    background-color: rgba(0, 128, 0, 0.603);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 4rem;
+}
+
+.hero-feature-content {
+    color: white;
+    text-align: center;
+    padding: 1.2rem 2.4rem; 
+    transition: var(--transition);  
+}
+
+.hero-feature-content:hover {
+    background-image: linear-gradient(to bottom, transparent, var(--transparency-1), var(--transparency-1));
+}
+
+.hero-feature-content:not(:first-child) {
+    border-left: var(--border);
+}
+
+.hero-text {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.hero-feature-content button {
+    padding: .8rem 1.2rem;
+    margin: 1.2rem 0;
+    border: none;
+    outline: none;
+}
+
+.hero-feature-content button span {
+    display: inline-block;
+    margin-left:  2rem;
+}
+
+.bgt {
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .hero-feature-content {
+        border-left: var(--border);
+    }
+
+    .hero-text {
+        font-size: 2.2rem;
+    }
+}
+
